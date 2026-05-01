@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quick Crave - Discover Deliciousness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#1a1c1b",
+                        "surface-container": "#f0ede9",
+                        "tertiary": "#5d5f5d",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#ae311e",
+                        "on-tertiary-fixed-variant": "#454746",
+                        "tertiary-fixed-dim": "#c6c7c5",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#31302d",
+                        "background": "#fcf9f4",
+                        "surface-container-low": "#f6f3ee",
+                        "on-primary-fixed": "#3f0300",
+                        "on-secondary-fixed-variant": "#484744",
+                        "primary-fixed": "#ffdad4",
+                        "outline": "#8d716b",
+                        "secondary-container": "#e5e2de",
+                        "on-background": "#1c1c19",
+                        "on-secondary-container": "#666461",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#e5e2de",
+                        "surface-bright": "#fcf9f4",
+                        "inverse-primary": "#ffb4a6",
+                        "surface-variant": "#e5e2dd",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#6a0700",
+                        "on-secondary-fixed": "#1c1c19",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#303231",
+                        "tertiary-fixed": "#e2e3e1",
+                        "secondary": "#605e5b",
+                        "on-primary-fixed-variant": "#8c1808",
+                        "primary-container": "#ff6b52",
+                        "surface-tint": "#ae311e",
+                        "surface-container-highest": "#e5e2dd",
+                        "tertiary-container": "#999a98",
+                        "outline-variant": "#e1bfb9",
+                        "on-surface-variant": "#59413d",
+                        "surface": "#fcf9f4",
+                        "inverse-on-surface": "#f3f0eb",
+                        "surface-container-high": "#eae8e3",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "surface-dim": "#dcdad5",
+                        "primary-fixed-dim": "#ffb4a6",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1c1c19"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "card-gap": "24px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-xl": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-stone-900/80 backdrop-blur-md font-['Plus_Jakarta_Sans'] antialiased docked full-width top-0 sticky z-50 border-b border-stone-100 dark:border-stone-800 shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tight text-orange-600 dark:text-orange-500">Quick Crave</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-orange-600 dark:text-orange-400 font-semibold hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors px-3 py-2 rounded-lg" href="/stitch/home" target="_top">Home</a>
+<a class="text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors px-3 py-2 rounded-lg" href="/stitch/restaurants" target="_top">Discover</a>
+<a class="text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors px-3 py-2 rounded-lg" href="/stitch/tracking" target="_top">Orders</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="p-2 text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors rounded-full active:scale-95 duration-200 relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<button class="p-2 text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/10">
+<img alt="Customer profile" class="w-full h-full object-cover" data-alt="A professional headshot of a friendly person with a warm smile, captured in soft, natural morning light. The background is a blurred, high-end kitchen setting with warm wood tones and clean white tiles, matching the Quick Crave brand aesthetic. The lighting is bright and high-key, emphasizing a clean and modern corporate minimalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY7l3NMckwbQcJdtd7ccrmlr0PtybE-K10dVf_BPu_IJDSb98Y-5ayQc4Z1dOJ8YkhyqenHCOLLb5mBrNyqOcTmhLg1ytkFfmYmiBJlOj4F6v5f1lKm3w_X2eJWBoGcg3hcn_BJ6TTVV3tnYLoyBT8KX0I4smbGkzj5rq-JyFt9ALXdU2l-nG_2MOJyJArmSP-YieOQIQgxARvngkmqm_VfLGjabNmlOwj_dWqFlLTzLKTzzVBnvtOOWt-9jyve-3iOCI6QIqYZg"/>
+</div>
+</div>
+</nav>
+</header>
+<main class="pb-24">
+<!-- Hero Section -->
+<section class="relative h-[500px] flex items-center px-6 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-[0.7]" data-alt="A top-down, high-quality gourmet photography shot of various colorful healthy dishes spread across a rustic wooden table. The scene includes fresh salads, roasted vegetables, and artisanal breads, all bathed in warm, sun-drenched kitchen lighting. The mood is vibrant, fresh, and appetizing, perfectly aligning with the high-curation minimalism of the design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWZoHP_gkIzmxroRJYxMTT3lYuWjN2g3-tSKCmdm9rd2Xu9te5xdIknCQ1g9TPNuUfaJrN3QKhxtBl0C9x8s7MPei3riFT1CkY1QNNEw6A1QOZjlwLUsdwwG2mGb0MoH2jP4MzLuTVpGy5A0S9U8nIabo9uA3QTHJsCSx61Gi721UMcVG-KMzsOra4XOdel8m5xI2w5ujkOWVt8IrdchaigMdhsy0HqvCFXuNqxnoJ3_bNaI1y4i4chaW2nPFttfhP6Fet1Fl7dw"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto w-full">
+<div class="max-w-2xl bg-white/10 backdrop-blur-xl p-8 rounded-3xl border border-white/20 shadow-2xl">
+<h1 class="font-headline-xl text-white mb-6">Savor the Clarity of Fine Dining at Home.</h1>
+<div class="flex flex-col gap-4">
+<!-- Address Selector -->
+<div class="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div class="flex-1">
+<p class="text-label-sm text-secondary uppercase tracking-widest">Delivery Address</p>
+<p class="font-label-md text-on-surface">330/A D.J Gunathilaka Lane, Gampaha District</p>
+</div>
+<button onclick="openAddressModal()" class="text-primary font-semibold text-sm hover:underline">Change</button>
+</div>
+<!-- Search Bar -->
+<div class="flex items-center bg-white p-2 rounded-2xl shadow-lg">
+<div class="flex flex-1 items-center px-3">
+<span class="material-symbols-outlined text-stone-400 mr-3" data-icon="search">search</span>
+<input class="w-full border-none focus:ring-0 text-body-md placeholder:text-stone-400" placeholder="Search for sushi, pasta, or burgers..." type="text"/>
+</div>
+<button class="bg-primary text-white px-8 py-3 rounded-xl font-semibold hover:bg-primary/90 transition-all active:scale-95">
+                                Search
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-lg text-on-surface">Browse by Category</h2>
+<button class="text-primary font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                    View All <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="flex gap-6 overflow-x-auto hide-scrollbar pb-4 -mx-6 px-6">
+<!-- Category Item -->
+<div class="flex-shrink-0 group cursor-pointer text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-all group-hover:scale-105 shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="local_pizza">local_pizza</span>
+</div>
+<span class="font-label-md">Pizza</span>
+</div>
+<div class="flex-shrink-0 group cursor-pointer text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-all group-hover:scale-105 shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="set_meal">set_meal</span>
+</div>
+<span class="font-label-md">Sushi</span>
+</div>
+<div class="flex-shrink-0 group cursor-pointer text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-all group-hover:scale-105 shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="lunch_dining">lunch_dining</span>
+</div>
+<span class="font-label-md">Burgers</span>
+</div>
+<div class="flex-shrink-0 group cursor-pointer text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-all group-hover:scale-105 shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="icecream">icecream</span>
+</div>
+<span class="font-label-md">Desserts</span>
+</div>
+<div class="flex-shrink-0 group cursor-pointer text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-all group-hover:scale-105 shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="local_drink">local_drink</span>
+</div>
+<span class="font-label-md">Drinks</span>
+</div>
+<div class="flex-shrink-0 group cursor-pointer text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-all group-hover:scale-105 shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="egg_alt">egg_alt</span>
+</div>
+<span class="font-label-md">Breakfast</span>
+</div>
+<div class="flex-shrink-0 group cursor-pointer text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-all group-hover:scale-105 shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="ramen_dining">ramen_dining</span>
+</div>
+<span class="font-label-md">Asian</span>
+</div>
+</div>
+</section>
+<!-- Featured Restaurants Section -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+<div class="flex items-center justify-between mb-10">
+<div>
+<h2 class="font-headline-lg text-on-surface">Featured Restaurants</h2>
+<p class="text-secondary mt-1">Hand-picked selections for your gourmet journey.</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full border border-outline-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Restaurant Card 1 -->
+<div class="group bg-white rounded-[2rem] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A high-end modern bistro interior with warm ambient lighting, featuring beautifully plated artisanal pasta on a marble tabletop. The atmosphere is sophisticated and clean, with minimal decor and soft warm tones that highlight the freshness of the ingredients. Professional food photography style with shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcRSryWUiI8wOI27M3tF6_a6PlmYSHqUVy450xlW6RYBUaHtofEW5jpa7S9oQF-b6GEY9qvpzjzL-zkdOo7QwL9PoMyDHk4CpEtQajxXo8e80S5JUoqsYP5P6X4oy-gxxBkGXVJKaCymUAst-9z3NiWyKZNALK1Y4jUYh4L_F2Jdl8q-gZWABKOcripVDjAKnNfKUwcCZGk4AX-Or6275r1guRwrDFa2fGXUiya66AR2I4tK5I1WVU88_SgxQaLLL30Fe3tXB7DQ"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-label-sm font-bold text-orange-600">POPULAR</div>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-3 py-2 rounded-xl flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm text-yellow-500" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-sm">4.8</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-on-surface">The Truffle Table</h3>
+<span class="text-primary font-bold">Rs.1250</span>
+</div>
+<p class="text-secondary text-sm mb-4">Italian • Truffle Specialties • Fine Dining</p>
+<div class="flex items-center gap-4 text-sm text-stone-500">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                                25-35 min
+                            </div>
+<div class="flex items-center gap-1 text-green-600 font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="delivery_dining">delivery_dining</span>
+                                FREE DELIVERY
+                            </div>
+</div>
+</div>
+</div>
+<!-- Restaurant Card 2 -->
+<div class="group bg-white rounded-[2rem] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A meticulously arranged selection of fresh sushi and sashimi served on a dark slate platter, illuminated by soft focused spotlights. The setting is a minimalist Zen-inspired Japanese restaurant with clean lines and a serene atmosphere. The vibrant colors of the fresh fish contrast beautifully against the dark surface, embodying a premium culinary experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHAS4p34LuYAptf-K0jVPpFC3Ej8pzz4oKpyVoTRVjNTGDntwV_enmlL5gO9B5beWof90XwNmBU7aWGRxoda08Gz94AyHEw96mU3id2OSWw2oS-goWjW9VV2nSINbyK2kc0IfG_9bXAIwwBUTVJQRtisG0ZkWgtF0iIEoRC1ZBIFZlcORH4onUZzTGoHUtGwr2jCtfvDEkojHi6vbJDZEwo3NVvUWhwmXSM6Zle4VOqlrk1jW8o7rYvynRMO2uKwoVgkuUUsZYWQ"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-label-sm font-bold text-blue-600">NEW</div>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-3 py-2 rounded-xl flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm text-yellow-500" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-sm">4.9</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-on-surface">Sakura Zen</h3>
+<span class="text-primary font-bold">Rs.1500</span>
+</div>
+<p class="text-secondary text-sm mb-4">Japanese • Sushi • Premium Grade</p>
+<div class="flex items-center gap-4 text-sm text-stone-500">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                                30-45 min
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="delivery_dining">delivery_dining</span>
+                                Rs.350 Delivery
+                            </div>
+</div>
+</div>
+</div>
+<!-- Restaurant Card 3 -->
+<div class="group bg-white rounded-[2rem] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A juicy, artisanal craft burger with melting cheese, fresh greens, and heirloom tomatoes, served on a toasted brioche bun. The lighting is warm and directional, reminiscent of a high-end gastropub. The background is softly blurred showing a clean, modern bar area with warm wood accents and metallic details, staying true to the Minimalist Corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIcVoEfLU83_b-uAzW_5RxiuyFJrknVBhYI02HFSIC7oFwPg7KK5BNM9i3GnB-Hh6PZWBtLPw0JPYpKvEKu8K9vSdam3C4fZZjFD77jbXKGg9ssNtqrBZBWsKOWzpyj_IQLipIjoSYBO2sMBVRIqLvk-NQg-TjBylFYUfIaYomVwgBs36RmvXDPqEqzD191t3j6Mq2D9r25jwOwfJqRd1NlfqhFDFjyuz3fqfdlZ-TvCEEKCLAphylNXLe_cywZ5resN5kcInnEA"/>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-3 py-2 rounded-xl flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm text-yellow-500" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-sm">4.6</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-on-surface">The Burger Craft</h3>
+<span class="text-primary font-bold">Rs.1950</span>
+</div>
+<p class="text-secondary text-sm mb-4">American • Gourmet Burgers • Craft Beer</p>
+<div class="flex items-center gap-4 text-sm text-stone-500">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                                15-25 min
+                            </div>
+<div class="flex items-center gap-1 text-green-600 font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="delivery_dining">delivery_dining</span>
+                                FREE DELIVERY
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Promotional Banner -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+<div class="bg-primary-container rounded-[2.5rem] p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="relative z-10 max-w-lg">
+<h2 class="text-headline-xl text-on-primary-container mb-4">Get 30% OFF your first premium order</h2>
+<p class="text-on-primary-container/80 text-body-lg mb-8">Experience Quick Crave with our curated selection of top-tier restaurants delivered straight to your door.</p>
+<button class="bg-on-primary-container text-white px-10 py-4 rounded-2xl font-bold text-lg hover:shadow-xl hover:scale-105 transition-all">
+                        Claim Discount Now
+                    </button>
+</div>
+<div class="relative z-10 w-full md:w-1/2 flex justify-end">
+<img class="rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 max-w-sm" data-alt="A close-up shot of a high-end chef's specialty dish, featuring seared scallops with vibrant edible flowers and microgreens. The plating is clean and artistic, reflecting the 'Quick Crave' philosophy. The lighting is bright and high-key, with soft reflections on a white porcelain plate, creating a trustworthy and luxurious aesthetic for a premium food platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDev90Qgn_bCR60uDfi65EsvFsnglmq363Xmh1_a2ulBZ-sfjkg5JGUK_os6u3FDhYoGjcS1xbNZoX-yMkl_95zV4AHZ0pvnMUlRU2ijUrhx2J52dRrnEw74Pn0YdDogH00nJfy17ZxOBDYHGeiub8fc5cP-_NGYBTM3qU-jB4aBg0AEiuXH3jagufnYXij1tU3cgAjSTW7Ncvnax4skuZPuY19mgF6H1QaplIUHXu630GOdtjsbGKA3eCyeXSbBHucsCqLVi9iHg"/>
+</div>
+<!-- Decorative elements -->
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-black/5 rounded-full blur-3xl"></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white/90 dark:bg-stone-900/90 backdrop-blur-lg font-['Plus_Jakarta_Sans'] text-[11px] font-medium fixed bottom-0 w-full z-50 rounded-t-2xl border-t border-stone-100 dark:border-stone-800 shadow-[0_-4px_20px_rgba(0,0,0,0.04)] md:hidden">
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3">
+<a class="flex flex-col items-center justify-center text-orange-600 dark:text-orange-400 scale-110 hover:text-orange-500 transition-all tap-highlight-transparent active:scale-90 duration-150" href="/stitch/home" target="_top">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-orange-500 transition-all tap-highlight-transparent active:scale-90 duration-150" href="/stitch/restaurants" target="_top">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span>Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-orange-500 transition-all tap-highlight-transparent active:scale-90 duration-150" href="/stitch/tracking" target="_top">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span>Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-orange-500 transition-all tap-highlight-transparent active:scale-90 duration-150" href="/stitch/home" target="_top">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span>Account</span>
+</a>
+</div>
+</nav>
+
+<!-- Address Change Modal -->
+<div id="addressModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-6 relative">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-bold text-on-surface">Change Delivery Address</h2>
+                <button onclick="closeAddressModal()" class="text-stone-400 hover:text-stone-600">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            
+            <form onsubmit="saveAddress(event)">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-secondary mb-2">Street Address</label>
+                        <input 
+                            type="text" 
+                            id="streetAddress" 
+                            required
+                            class="w-full px-4 py-3 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                            placeholder="Enter your street address"
+                        />
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-secondary mb-2">City</label>
+                            <input 
+                                type="text" 
+                                id="city" 
+                                required
+                                class="w-full px-4 py-3 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                                placeholder="City"
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-secondary mb-2">District</label>
+                            <input 
+                                type="text" 
+                                id="district" 
+                                required
+                                class="w-full px-4 py-3 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                                placeholder="District"
+                            />
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-secondary mb-2">Postal Code</label>
+                        <input 
+                            type="text" 
+                            id="postalCode" 
+                            pattern="[0-9]{5}"
+                            class="w-full px-4 py-3 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                            placeholder="12345"
+                        />
+                    </div>
+                </div>
+                
+                <div class="flex gap-3 mt-6">
+                    <button 
+                        type="button" 
+                        onclick="closeAddressModal()"
+                        class="flex-1 px-4 py-3 border border-stone-200 text-stone-700 rounded-xl font-semibold hover:bg-stone-50 transition-colors"
+                    >
+                        Cancel
+                    </button>
+                    <button 
+                        type="submit"
+                        class="flex-1 px-4 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition-colors"
+                    >
+                        Save Address
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+let currentAddress = "330/A D.J Gunathilaka Lane, Gampaha District";
+
+function openAddressModal() {
+    const modal = document.getElementById('addressModal');
+    modal.classList.remove('hidden');
+    
+    // Pre-fill form with current address
+    const parts = currentAddress.split(',');
+    document.getElementById('streetAddress').value = parts[0] || '';
+    document.getElementById('city').value = parts[1] ? parts[1].trim() : '';
+    document.getElementById('district').value = parts[2] ? parts[2].trim() : '';
+}
+
+function closeAddressModal() {
+    const modal = document.getElementById('addressModal');
+    modal.classList.add('hidden');
+}
+
+function saveAddress(event) {
+    event.preventDefault();
+    
+    const streetAddress = document.getElementById('streetAddress').value;
+    const city = document.getElementById('city').value;
+    const district = document.getElementById('district').value;
+    const postalCode = document.getElementById('postalCode').value;
+    
+    // Construct new address
+    let newAddress = streetAddress;
+    if (city) newAddress += ', ' + city;
+    if (district) newAddress += ', ' + district;
+    if (postalCode) newAddress += ' ' + postalCode;
+    
+    // Update the displayed address
+    currentAddress = newAddress;
+    const addressElement = document.querySelector('.font-label-md.text-on-surface');
+    if (addressElement) {
+        addressElement.textContent = newAddress;
+    }
+    
+    // Show success message
+    showNotification('Delivery address updated successfully!');
+    
+    // Close modal
+    closeAddressModal();
+}
+
+function showNotification(message) {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-xl shadow-lg z-50 flex items-center gap-2';
+    notification.innerHTML = `
+        <span class="material-symbols-outlined">check_circle</span>
+        <span>${message}</span>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}
+
+// Close modal when clicking outside
+document.getElementById('addressModal').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closeAddressModal();
+    }
+});
+</script>
+
+</body></html>
+
